@@ -1,0 +1,262 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>Scope of NumPy &#8212; NumPy Enhancement Proposals</title>
+    
+  <link href="_static/css/theme.css" rel="stylesheet">
+  <link href="_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="_static/css/blank.css" />
+    
+  <link rel="preload" as="script" href="_static/js/index.be7d3bbb2ef33a8344ce.js">
+
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="NumPy Roadmap" href="roadmap.html" />
+    <link rel="prev" title="Roadmap &amp; NumPy Enhancement Proposals" href="index.html" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+<link rel="stylesheet" href="_static/numpy.css" type="text/css" />
+
+    <!-- PR #17220: This is added via javascript in versionwarning.js  -->
+    <!-- link rel="canonical" href="http://numpy.org/doc/stable/scope.html" / -->
+
+
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+    <nav class="navbar navbar-light navbar-expand-lg bg-light fixed-top bd-navbar" id="navbar-main"><div class="container-xl">
+
+  <div id="navbar-start">
+    
+    
+
+<a class="navbar-brand" href="content.html">
+  <img src="_static/numpylogo.svg" class="logo" alt="logo">
+</a>
+
+
+    
+  </div>
+
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-collapsible" aria-controls="navbar-collapsible" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  
+  <div id="navbar-collapsible" class="col-lg-9 collapse navbar-collapse">
+    <div id="navbar-center" class="mr-auto">
+      
+      <div class="navbar-center-item">
+        <ul id="navbar-main-elements" class="navbar-nav">
+    <li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="index.html">
+  Index
+ </a>
+</li>
+
+<li class="toctree-l1 current active nav-item">
+ <a class="current reference internal nav-link" href="#">
+  The Scope of NumPy
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="roadmap.html">
+  Current roadmap
+ </a>
+</li>
+
+    
+    <li class="nav-item">
+        <a class="nav-link nav-external" href="https://github.com/numpy/numpy/issues?q=is%3Aopen+is%3Aissue+label%3A%2223+-+Wish+List%22">Wishlist<i class="fas fa-external-link-alt"></i></a>
+    </li>
+    
+</ul>
+      </div>
+      
+    </div>
+
+    <div id="navbar-end">
+      
+      <div class="navbar-end-item">
+        <ul id="navbar-icon-links" class="navbar-nav" aria-label="Icon Links">
+        <li class="nav-item">
+          <a class="nav-link" href="https://github.com/numpy/numpy" rel="noopener" target="_blank" title="GitHub">
+            <span><i class="fab fa-github-square"></i></span>
+            <label class="sr-only">GitHub</label>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="https://twitter.com/numpy_team" rel="noopener" target="_blank" title="Twitter">
+            <span><i class="fab fa-twitter-square"></i></span>
+            <label class="sr-only">Twitter</label>
+          </a>
+        </li>
+      </ul>
+      </div>
+      
+    </div>
+  </div>
+</div>
+    </nav>
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+            
+            <!-- Only show if we have sidebars configured, else just a small margin  -->
+            <div class="col-12 col-md-3 bd-sidebar"><form class="bd-search d-flex align-items-center" action="search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search the docs ..." aria-label="Search the docs ..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+  <div class="bd-toc-item active">
+    
+  </div>
+</nav>
+            </div>
+            
+          
+
+          
+          <div class="d-none d-xl-block col-xl-2 bd-toc">
+            
+              
+              <div class="toc-item">
+                
+
+<nav id="bd-toc-nav">
+    
+</nav>
+              </div>
+              
+              <div class="toc-item">
+                
+              </div>
+              
+            
+          </div>
+          
+
+          
+          
+            
+          
+          <main class="col-12 col-md-9 col-xl-7 py-md-5 pl-md-5 pr-md-4 bd-content" role="main">
+              
+              <div>
+                
+  <section id="scope-of-numpy">
+<h1>Scope of NumPy<a class="headerlink" href="#scope-of-numpy" title="Permalink to this headline">¶</a></h1>
+<p>Here, we describe aspects of N-d array computation that are within scope for NumPy development. This is <em>not</em> an aspirational definition of where NumPy should aim, but instead captures the status quo—areas which we have decided to continue supporting, at least for the time being.</p>
+<ul class="simple">
+<li><p><strong>In-memory, N-dimensional, homogeneously typed (single pointer + strided) arrays on CPUs</strong></p>
+<ul>
+<li><p>Support for a wide range of data types</p></li>
+<li><p>Not specialized hardware such as GPUs</p></li>
+<li><p>But, do support wide range of CPUs (e.g. ARM, PowerX)</p></li>
+</ul>
+</li>
+<li><p><strong>Higher level APIs for N-dimensional arrays</strong></p>
+<ul>
+<li><p>NumPy is a <em>de facto</em> standard for array APIs in Python</p></li>
+<li><p>Indexing and fast iteration over elements (ufunc)</p></li>
+<li><p>Interoperability protocols with other data container implementations (like
+<a class="reference external" href="https://numpy.org/devdocs/user/basics.dispatch.html#basics-dispatch" title="(in NumPy v1.23.dev0)"><span class="xref std std-ref">__array_ufunc__ and __array_function__</span></a>.</p></li>
+</ul>
+</li>
+<li><p><strong>Python API and a C API</strong> to the ndarray’s methods and attributes.</p></li>
+<li><p>Other <strong>specialized types or uses of N-dimensional arrays</strong>:</p>
+<ul>
+<li><p>Masked arrays</p></li>
+<li><p>Structured arrays (informally known as record arrays)</p></li>
+<li><p>Memory mapped arrays</p></li>
+</ul>
+</li>
+<li><p>Historically, NumPy has included the following <strong>basic functionality
+in support of scientific computation</strong>. We intend to keep supporting
+(but not to expand) what is currently included:</p>
+<ul>
+<li><p>Linear algebra</p></li>
+<li><p>Fast Fourier transforms and windowing</p></li>
+<li><p>Pseudo-random number generators</p></li>
+<li><p>Polynomial fitting</p></li>
+</ul>
+</li>
+<li><p>NumPy provides some <strong>infrastructure for other packages in the scientific Python ecosystem</strong>:</p>
+<ul>
+<li><p>numpy.distutils (build support for C++, Fortran, BLAS/LAPACK, and other
+relevant libraries for scientific computing)</p></li>
+<li><p>f2py (generating bindings for Fortran code)</p></li>
+<li><p>testing utilities</p></li>
+</ul>
+</li>
+<li><p><strong>Speed</strong>: we take performance concerns seriously and aim to execute
+operations on large arrays with similar performance as native C
+code. That said, where conflict arises, maintenance and portability take
+precedence over performance. We aim to prevent regressions where
+possible (e.g., through asv).</p></li>
+</ul>
+</section>
+
+
+              </div>
+              
+              
+          </main>
+          
+
+      </div>
+    </div>
+  
+  <script src="_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+<footer class="footer mt-5 mt-md-0">
+  <div class="container">
+    
+    <div class="footer-item">
+      <p class="copyright">
+    &copy; Copyright 2017-2018, NumPy Developers.<br>
+</p>
+    </div>
+    
+    <div class="footer-item">
+      <p class="sphinx-version">
+Created using <a href="http://sphinx-doc.org/">Sphinx</a> 4.2.0.<br>
+</p>
+    </div>
+    
+  </div>
+</footer>
+  </body>
+</html>
